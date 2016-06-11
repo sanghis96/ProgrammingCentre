@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Solution 
+public class ACM_ICPC_Team 
 {
     public static void main(String[] args) 
     {
