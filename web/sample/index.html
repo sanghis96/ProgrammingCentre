@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+     <head>
+	      <title>WEBSITE</title>
+	      <meta charset="UTF-8"> 
+		  <meta name="description" content="A Sample Website for my practice">
+		  <meta name="keywords" content="SAMPLE, SAMARTH SANGHI, WEBSITE">	<!-- Helps the search engines with these Keywords -->
+		  <meta name="author" content="Samarth Sanghi">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">	 
+		                                                     <!--  makes web page look good on all devices (desktops, tablets, and phones)  -->
+		  <!--  <meta http-equiv="refresh" content="30">	Refresh document every 30 seconds   -->		 
+		  <link rel="stylesheet" href="www.sample.com/css/tableStyle.css">
+		  <link rel="stylesheet" href="www.sample.com/css/menuStyle.css">	 <!--  <link> element is most often used to link to style sheets  -->
+		  <link rel="stylesheet" href="www.sample.com/css/layout.css">
+	      	<!--  Inline CSS  -->
+	      <style> 
+	      	body.sam { 
+	      		background-color:#BBBBBB;
+	      		border: 1px solid black;
+	      		padding: 10px;
+	      		margin: 30px;
+	      	}
+	      	#h101 {
+	      		color:rgb(0,255,255);
+	      		font-family:courier;
+	      		font-size:300%;
+	      		text-align:center;
+	      	}
+	      	p {
+	      		font-family:courier;
+	      		font-size:150%;
+	      	}
+	      	#a1:link    {color:green; background-color:transparent; text-decoration:none}
+	      	#a1:visited {color:pink; background-color:transparent; text-decoration:none}
+	      	#a1:hover   {color:red; background-color:transparent; text-decoration:underline}
+	      	#a1:active  {color:yellow; background-color:transparent; text-decoration:underline}
+	      </style>
+	 </head>
+	 <body class="sam">		<!-- OR <body style="CSS properties">  -->
+	      <div>		<!--  <div> element can be used to style blocks of content  -->
+	      	<ul id="menu">
+	      		<li><a href="#h101">Main Heading</a></li>
+	      		<li><a href="#bookmark">Heading 2</a></li>
+	      	</ul>
+	      </div>
+	      <nav>
+	      	W<br><br><br>E<br><br><br>B<br><br><br>S<br><br><br>I<br><br><br>T<br><br><br>E
+	      </nav>
+	      <section>
+	      	<h1 id="h101">Heading</h1>		<!-- OR <h1 style="CSS properties">  -->
+		    	<a href="www.sample.com/sam.htm"><img src="www.sample.com/images/pic.jpg" title="My image" alt="My image" style="width:140px;height:142px;"></a>
+		     	<br><br>
+		     	<a href="#bookmark">Direct jump to next heading</a>
+		     	<p title="Faltu H Sab">		<!-- OR <p title="Faltu H Sab" style="CSS properties">  -->
+		        	This is a <b>sample</b> <i>website</i> only for <small>practice</small>. Learning from <a href="http://www.w3schools.com"><abbr title="Website for Web Development">w3schools.com</abbr></a>, a web developer's site. It provides <ins>tutorial</ins> and <del>refrences</del> covering many aspects of web programming, including <sup><abbr title="Hyper Text Markup Language">HTML</abbr></sup>, <sub><abbr title="Cascading Style Sheets">CSS</abbr></sub>, JavaScrpt, <abbr title="EXtensible Markup Language">XML</abbr>, <mark><abbr title="Structured Querry Language">SQL</abbr></mark>, PHP, ASP, etc.
+		        	<br>
+		        	<bdo dir="rtl"><abbr title="Engineering">Sab Moh Maya Hai</abbr></bdo>
+		        	<address>A-104<br>RCOEM Boys Hostel<br>Ramdeotekdi Gittikhadan<br>Nagpur - 443310</address>
+		        	<br><br><a href="www.sample.com/sam.htm" target="MyWeb">My Website</a> which I am desinging<br>
+		        	<iframe src="www.sample.com/default.html" name="MyWeb"></iframe>
+		     	</p>
+		     	<p title="Website for learning python">
+		        	<a id="a1" href="http://automatetheboringstuff.com" target="_blank">Learn Python</a> Practical Programming for Total Beginners
+		     	</p>
+		  </section>
+		     	<hr>
+		  	<h1 id="bookmark"><span style="color:red">Head</span>ing 2</h1>			<!-- <span> element can be used to style parts of the text --> 
+		  		<pre>
+			qwerty
+			asdfgh							<!--  <pre> tag is used to print as it is return -->
+			zxcvbn
+		  		</pre>		 
+		  		<table style="width:100%">
+		  			<caption>My Table</caption>
+		  			<tr>
+		  				<th>First Name</th>
+		  				<th>Last Name</th>			<!--   <th> tag is for table headers  -->
+		  				<th>D.O.B.</th>
+		  				<th>E-mail</th>
+		  			</tr>
+		  			<tr>							<!--   <tr> tag represents table row  -->
+		  				<td>Samarth</td>
+			  			<td>Sanghi</td>
+			  			<td>08/09/1996</td>			<!--   <td> tag represents table data -->
+			  			<td>sanghi.samarth@gmail.com</td>
+		  			</tr>
+		  			<tr>
+		  				<td>Pratik</td>
+			  			<td>Surana</td>
+			  			<td>23/01/1995</td>
+			  			<td>pratiksurana91@gmail.com</td>
+		  			</tr>
+		  			<tr>
+		  				<td>Krushna</td>
+			  			<td>Sharma</td>
+			  			<td>17/06/1996</td>
+			  			<td>krushnasharma@gmail.com</td>
+		  			</tr>
+		  			<tr>
+		  				<td>Saurabh</td>
+			  			<td>Jharkhandi</td>
+			  			<td>09/11/1995</td>
+			  			<td>ssagrawal9111995@gmail.com</td>
+		  			</tr>
+		  		</table>
+		  		<ol type="i">						<!-- <ol> tag is ordered list  -->
+		  			<li>1 Year</li>
+		  			<li>2 Year</li>					<!-- <li> tag is list item     -->
+		  			<li>3 Year</li>
+		  			<li>4 Year</li>
+		  		</ol>
+
+		  <video width="320" height="240" autoplay>
+   			<source src="www.sample.com/media/ThugLife.mp4" type="video/mp4">
+ 		  Your browser does not support the video tag.
+		  </video> 
+		  <audio controls>
+    		<source src="www.sample.com/media/GIPSY_(Radio_Edit)_-_Dimitri_Vegas__Like_Mike_feat_Boostedkids_(mp3.vc).mp3" type="audio/mpeg">
+		  Your browser does not support the audio element.
+		  </audio>
+		  <!--
+		  <object width="400" height="50" data="microvave.java"></object>
+		  -->
+		  <iframe width="560" height="315" src="https://www.youtube.com/embed/pcgCed-Z2ts" frameborder="0" allowfullscreen></iframe>
+
+		  <div style="background-color:rgb(100,100,150);color:rgb(225,255,0);">
+		  	<form autocomplete="off">		<!--  didn't show the sugessions I have entered earliear  -->
+		  							<!--  <form action="action_page.php">  executes some script page on clicking the button  -->
+		  							<!--  <form action="action_page.php" method="get"OR"post">  -->
+		  							<!--  <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8" 
+		  							                  enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate>  -->
+   			  <fieldset>
+   				<legend>Personal information:</legend>
+   				
+   				<span style="float:right">Search Google:
+  				<input type="search" name="googlesearch"></span>
+   				
+   				First name:<br>
+  				<input type="text" name="firstname" value="John" readonly><br>			<!--  read only (cannot be changed)  -->
+   				Last name:<br>
+  				<input type="text" name="lastname" value="Deo" maxlength="10"><br><br> <!--specifies the maximum allowed length for input field-->
+  				
+  				Age:<br>
+  				0
+   				<input type="range"  id="age" name="age" value="18" min="0" max="100">	<!-- a slide bar for input  -->
+  				100<br><br> 
+  				
+  				Gender:<br>
+  				<input type="radio" name="gender" value="male" checked> Male<br>   <!-- choose one at a tym  -->
+  				<input type="radio" name="gender" value="female"> Female<br>
+  				<input type="radio" name="gender" value="other"> Other<br><br>
+  				
+  				Birthday:
+  				<input type="date" name="bday" max="2016-06-16"><br><br>   <!-- shows a calender for enter a value  -->
+  				
+  				Telephone No.:
+  				<input type="tel" name="telNo" disabled><br><br>	<!-- value can not be taken by this field  -->
+  				
+  				Add your homepage:
+  				<input type="url" name="homepage"><br><br>
+  				
+  				<select name="branch">
+  					<option value="cse">CSE</option>			<!-- By default first one is selected -->
+   					<option value="civil">Civil</option>
+  					<option value="en" selected>EN</option>
+   					<option value="mech">Mechanical</option>
+				</select><br><br>
+				
+				<input list="branch" name="branch">				<!-- Another type of list selection  -->
+					<datalist id="branch">
+   						<option value="CSE">
+   						<option value="Civil">
+   						<option value="EN">
+   						<option value="Mechanical">
+					</datalist><br><br>
+				
+				E-mail:
+  				<input type="email" name="email"  size="40" required autofocus><br>	<!-- field automatically get focus when the page loads -->
+  				
+  				Password:
+  				<input type="password" name="psw" required><br><br>
+  				
+  				<input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br> <!--like radio btn but choose more than one at a tym-->
+   				<input type="checkbox" name="vehicle2" value="Car"> I have a car <br>
+   				
+   				Quantity (between 1 and 5):
+  				<input type="number" name="quantity" min="1" max="5"><br><br>  <!-- only take numbers from 1 to 5 only  -->
+  				
+  				Favorite color:
+  				<input type="color" name="favcolor"><br><br>
+  				
+  				Country code: 
+  				<input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br><br>
+  													<!-- takes only those input which fits with pattern given
+  															And "title" attribute to describe about the field and to help the user --> 
+  				
+  				Select your profile pictures: 
+  				<input type="file" name="img" multiple><br><br>
+  											<!-- type="file" browse the files from our pc and multiple for choosing multiple files  -->
+  				
+  				<textarea name="message" rows="5" cols="30" placeholder="Enter some message"></textarea>
+  											<!-- "placeeholder" - The hint is displayed in the input field before the user enters a value -->
+				
+				<button type="button" onclick="alert('Saved Successfuly ! ! !')">SAVE</button><br><br> <!-- displays a pop up message -->
+  				
+  				<input type="submit" value="Submit">										 <!-- sets a default submit button  -->
+  				
+  				<input type="image" src="www.sample.com/images/button.png" alt="Submit" width="200" height="100">  <!-- sets a submit button with image -->
+  			  </fieldset>
+			</form> 
+		  </div>	
+		  <hr>
+		  <p>
+		  	Characters, not present on keyboard :- <br>
+		  	&lt &gt &amp &cent &pound &yen &euro &copy &reg<br>
+		  	more entties will be added soon...
+		  </p>
+	 </body>
+</html>
