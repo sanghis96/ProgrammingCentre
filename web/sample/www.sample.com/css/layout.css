@@ -1,0 +1,17 @@
+nav
+{
+	line-height:30px;
+    background-color:#eeeeee;
+    height:580px;
+    width:50px;
+    float:left;
+    padding:5px; 
+
+}
+section
+{
+	background-color:rgb(100,100,100); 
+	color:rgb(225,225,225);
+	float:center;
+    padding:20px;
+}
