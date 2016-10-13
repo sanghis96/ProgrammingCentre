@@ -42,7 +42,7 @@ void draw(void)
 	glFlush();
 	*/
 	Point img1[10];
-	t.scale(n, obj, img1, 2, 2);/*
+	t.scale(n, obj, img1, 2, 2);
 	//glClear(GL_COLOR_BUFFER_BIT);
 	glColor3f(0.0,1.0,0.0);//green
 	glBegin(GL_POINTS);
@@ -52,8 +52,8 @@ void draw(void)
 		l.line(img1[i].x,img1[i].y,img1[(i+1)%n].x,img1[(i+1)%n].y);	
 	}
 	glEnd();
-	glFlush();*/
-	
+	glFlush();
+	/*
 	Point img2[10];
 	t.translate(n, img1, img2, 0, 200);
 	//glClear(GL_COLOR_BUFFER_BIT);
@@ -62,7 +62,7 @@ void draw(void)
 
 	fillPolygon fp;
 	fp.edgeflag();
-
+	*/
 }
 void Init()
 {
