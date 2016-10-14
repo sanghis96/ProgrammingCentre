@@ -7,7 +7,7 @@ using namespace std;
 
 Point window[4];
 
-void mid(Point line[2])
+void clip(Point line[2])
 {
     double yl,yr,xb,xt,m;
 	int xl=window[0].x, xr=window[3].x, yb=window[0].y, yt=window[3].y;
@@ -111,8 +111,25 @@ void mid(Point line[2])
 		}
 		cout<<"\nIntersection points: "<<newLine[0].x<<" "<<newLine[0].y<<"    "<<newLine[1].x<<" "<<newLine[1].y;
 
-		Point temp1[4], temp2[2];
+		Point ViewPort[2];
+		cout<<"\n\nEnter the Xmin, Ymin, Xmax, Ymax of Viewport:-\n";
+		for(int i=0; i<2; i++)
+			cin>>ViewPort[i].x>>ViewPort[i].y;
+		
+		Point temp2[2];
 		Transformation t;
+		t.map(4, window, ViewPort);
+		t.map(2, newLine, temp2);
+		
+		dda v;
+		v.window(ViewPort);
+		v.line(temp2[0].x, temp2[0].y, temp2[1].x, temp2[1].y);
+		/*
+		Transformation t;
+		t.map(4, 
+
+		Point temp1[4], temp2[2];
+		
 		t.translate(4, window, temp1, 250, 200);
 		t.translate(2, newLine, temp2, 250, 200);
 		
@@ -131,7 +148,7 @@ void mid(Point line[2])
 		dda l;
 		l.line(temp2[0].x, temp2[0].y, temp2[1].x, temp2[1].y);
 		glEnd();
-		glFlush();
+		glFlush();*/
 	}
 }
 
@@ -142,11 +159,8 @@ void Clipping(void)
 	glClear(GL_COLOR_BUFFER_BIT);
 	glColor3f(0.0,0.0,0.0);//black
 	glBegin(GL_POINTS);
-	for(int i=0; i<4; i++)
-	{
-		dda l;
-		l.line(window[i].x,window[i].y,window[(i+1)%4].x,window[(i+1)%4].y);	
-	}
+	dda w;
+	w.window(window);
 	glEnd();
 	glFlush();
 
@@ -162,7 +176,7 @@ void Clipping(void)
 	glEnd();
 	glFlush();
 
-	mid(line);
+	clip(line);
 }
 void Init()
 {
@@ -182,8 +196,8 @@ int main(int argc, char **argv)
 	glutCreateWindow("Clipping");
 	Init();
 
-	cout<<"Enter the co-ordinates of Window:-\n";
-	for(int i=0; i<4; i++)
+	cout<<"Enter the Xmin, Ymin, Xmax, Ymax of Window:-\n";
+	for(int i=0; i<2; i++)
 		cin>>window[i].x>>window[i].y;
 
 	glutDisplayFunc(Clipping);

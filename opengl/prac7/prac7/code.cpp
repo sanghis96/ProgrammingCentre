@@ -9,8 +9,6 @@ Point obj[10];
 int n,I,i,minx,maxx,temp,p,x,y,cnt,flag;
 int ch;
 
-
-
 void draw(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -57,19 +55,16 @@ void draw(void)
 	case 1: int Tx, Ty;
 			cout<<"\nEnter translating factors(Tx, Ty):";
 			cin>>Tx>>Ty;
-
 			t.translate(n, obj, img, Tx, Ty);
-			
-			
 			break;
-	case 2:int Sx, Sy;
+
+	case 2: int Sx, Sy;
 			cout<<"\nEnter scaling factors(Sx, Sy):";
 			cin>>Sx>>Sy;
-
 			t.scale(n, obj, img, Sx, Sy);
-			
 			break;
-	case 3:int axis;
+
+	case 3: int axis;
 			cout<<"\nEnter the choice of Axis:-"<<endl;
 			cout<<"1.about X-axis"<<endl;
 			cout<<"2.about Y-axis"<<endl;
@@ -80,13 +75,21 @@ void draw(void)
 			cin>> axis;
 			t.reflect(n, obj, img, axis);
 			break;
-	case 4:float angle;
+
+	case 4: float angle;
+			int rt;
+			cout<<"\nEnter the choice for Rotation:-"<<endl;
+			cout<<"1.Clockwise"<<endl;
+			cout<<"2.Anti-clockwise"<<endl;
+			cout<<"Enter your choice: ";
+			cin>> rt;
 			cout<<"\nEnter the angle:";
 			cin>>angle;
-			t.rotate(n, obj, img, angle);
+			t.rotate(n, obj, img, angle, rt);
 			break;
-	case 5:int sh;
-			cout<<"\nEnter the choice:-"<<endl;
+
+	case 5: int sh;
+			cout<<"\nEnter the choice for Shearing:-"<<endl;
 			cout<<"1.X-shearing"<<endl;
 			cout<<"2.Y-shearing"<<endl;
 			cout<<"Enter your choice: ";
@@ -98,6 +101,7 @@ void draw(void)
 			break;
 	default:cout<<"\n\n\tWrong Choice!!!";
 	}
+
 	//glClear(GL_COLOR_BUFFER_BIT);
 	glColor3f(0.0,1.0,0.0);//blue
 	glBegin(GL_POINTS);
