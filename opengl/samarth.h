@@ -1,4 +1,5 @@
 #include<GL/glut.h>
+#include<math.h>
 
 class Point
 {
@@ -77,6 +78,16 @@ class dda
 			line(obj[i].x,obj[i].y,obj[(i+1)%n].x,obj[(i+1)%n].y);
 		glEnd();
 		glFlush();
+	}
+
+	void window(Point win[])
+	{
+		Point window[4];
+		window[0].x = win[0].x; window[0].y = win[0].y;
+		window[1].x = win[1].x; window[1].y = win[0].y;
+		window[2].x = win[1].x; window[2].y = win[1].y;
+		window[3].x = win[0].x; window[3].y = win[1].y;
+		polygon(4, window);
 	}
 };
 
@@ -305,7 +316,48 @@ class Transformation
 	}
 	void scale(int n, Point obj[], Point img[], int Sx, int Sy)
 	{
-		int T[3][3] = {{Sx,0,0},{0,Sy,0},{0,0,1}};
+		float T[3][3] = {{Sx,0,0},{0,Sy,0},{0,0,1}};
+		int object[10][3];
+		for(int i=0; i<n; i++)
+		{
+			object[i][0] = obj[i].x;
+			object[i][1] = obj[i].y;
+			object[i][2] = 1;
+		}
+		float result[10][3];
+		for(int i=0; i<n; i++)
+			for(int j=0; j<3; j++)
+			{
+				result[i][j] = 0;
+				for(int k=0; k<3; k++)
+					result[i][j] += object[i][k]*T[k][j];
+				if(j==0)
+					img[i].x = result[i][j];
+				if(j==1)
+					img[i].y = result[i][j];
+			}
+	}
+	void reflect(int n, Point obj[], Point img[], int ch)
+	{
+		int T[3][3] = {{0,0,0},{0,0,0},{0,0,1}};;
+		switch(ch)
+		{
+		case 1:T[0][0] = 1;
+				T[1][1] = -1;
+				break;
+		case 2:T[0][0] = -1;
+				T[1][1] = 1;
+				break;
+		case 3:T[0][1] = 1;
+				T[1][0] = 1;
+				break;
+		case 4:T[0][1] = -1;
+				T[1][0] = -1;
+				break;
+		case 5:T[0][0] = -1;
+				T[1][1] = -1;
+				break;
+		}
 		int object[10][3];
 		for(int i=0; i<n; i++)
 		{
@@ -326,5 +378,74 @@ class Transformation
 					img[i].y = result[i][j];
 			}
 	}
-
+	void rotate(int n, Point obj[], Point img[], float angle, int ch)
+	{
+		angle *= 0.0175;
+		//float cos = cos(angle), sin = sin(angle);
+		float T[3][3] = {{cos(angle),sin(angle),0},{sin(angle),cos(angle),0},{0,0,1}};
+		if(ch == 1)
+			T[0][1] *= -1;
+		if(ch == 2)
+			T[1][0] *= -1;
+		int object[10][3];
+		for(int i=0; i<n; i++)
+		{
+			object[i][0] = obj[i].x;
+			object[i][1] = obj[i].y;
+			object[i][2] = 1;
+		}
+		float result[10][3];
+		for(int i=0; i<n; i++)
+			for(int j=0; j<3; j++)
+			{
+				result[i][j] = 0;
+				for(int k=0; k<3; k++)
+					result[i][j] += object[i][k]*T[k][j];
+				if(j==0)
+					img[i].x = result[i][j];
+				if(j==1)
+					img[i].y = result[i][j];
+			}
+	}
+	void shear(int n, Point obj[], Point img[], int sh, int ch)
+	{
+		int T[3][3] = {{1,0,0},{0,1,0},{0,0,1}};
+		if(ch == 1)
+			T[0][1] = sh;
+		if(ch == 2)
+			T[1][0] = sh;
+		
+		int object[10][3];
+		for(int i=0; i<n; i++)
+		{
+			object[i][0] = obj[i].x;
+			object[i][1] = obj[i].y;
+			object[i][2] = 1;
+		}
+		int result[10][3];
+		for(int i=0; i<n; i++)
+			for(int j=0; j<3; j++)
+			{
+				result[i][j] = 0;
+				for(int k=0; k<3; k++)
+					result[i][j] += object[i][k]*T[k][j];
+				if(j==0)
+					img[i].x = result[i][j];
+				if(j==1)
+					img[i].y = result[i][j];
+			}
+	}
+	void map(int n, Point window[], Point viewport[])
+	{
+		Point NDC[50];
+		int Tx = -window[0].x, Ty = -window[0].y;
+		translate(n, window, NDC, Tx, Ty);
+		int Sx = (viewport[1].x-viewport[0].x)/(window[1].x-window[0].x);
+		int Sy = (viewport[1].y-viewport[0].y)/(window[1].y-window[0].y);
+		Point img2[50];
+		scale(n, NDC, img2, Sx, Sy);
+		Tx = -viewport[0].x;
+		Ty = -viewport[0].y;
+		translate(n, img2, viewport, Tx, Ty);
+	}
 };

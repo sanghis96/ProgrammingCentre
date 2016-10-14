@@ -22,9 +22,11 @@ void draw(void)
 	}
 	glEnd();
 	glFlush();
-
+	
+	/*
 	Bresenhans c;
 	c.ellipse(100, 100, 20, 40);
+	*/
 	
 	Transformation t;
 	/*
@@ -63,6 +65,8 @@ void draw(void)
 	fillPolygon fp;
 	fp.edgeflag();
 	*/
+
+
 }
 void Init()
 {
