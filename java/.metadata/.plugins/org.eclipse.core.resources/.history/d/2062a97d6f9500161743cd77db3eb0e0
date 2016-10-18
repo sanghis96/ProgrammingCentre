@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+
+public class Comments
+{
+	public static void main(String[] args) throws IOException, FileNotFoundException
+	{
+		Scanner in = new Scanner(System.in);
+		Scanner positive = new Scanner(new File("E:\\ProgrammingCentre\\java\\Practice\\src\\positiveComment.txt"));
+		Scanner negative = new Scanner(new File("E:\\ProgrammingCentre\\java\\Practice\\src\\negativeComment.txt"));
+		int mood = 1;
+		String comment = in.nextLine();
+		String words[] = comment.split(" ");
+		int len = words.length;
+		System.out.println(len);
+		for(int i=0; i<len; i++)
+		{
+			boolean flag = false;
+			while(positive.hasNextLine())
+				if(words[i].equalsIgnoreCase(positive.nextLine()))
+				{
+					mood *= 1;
+					flag = true;
+					break;
+				}
+			if(!flag)
+				while(negative.hasNextLine())
+					if(words[i].equalsIgnoreCase(negative.nextLine()))
+					{
+						mood *= -1;
+						break;
+					}
+		}
+		if(mood > 0)
+			System.out.println("\nPositive Comment");
+		if(mood < 0)
+			System.out.println("\nNegative Comment");
+		negative.close();
+		positive.close();
+		in.close();
+	}
+}
