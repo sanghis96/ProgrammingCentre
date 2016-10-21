@@ -1,4 +1,4 @@
-﻿Build started 14-Oct-16 6:33:02 PM.
+﻿Build started 21-Oct-16 10:22:45 AM.
      1>Project "E:\ProgrammingCentre\opengl\prac7\prac7\prac7.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\prac7.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -26,4 +26,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.65
+Time Elapsed 00:00:05.85
