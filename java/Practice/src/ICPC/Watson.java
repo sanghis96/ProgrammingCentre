@@ -2,27 +2,31 @@ package ICPC;
 
 import java.util.Scanner;
 
-public class Watson 
+class Watson 
 {
-	private static Scanner sc;
 	public static void main(String[] args)
 	{
-		sc = new Scanner(System.in);
-		int T = sc.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();		//  Input no of Test Cases
+		if(T<1 || T>100)			//  Checking boundary conditions
+			System.exit(0);
 		while(T-- > 0)
 		{
-			int d = sc.nextInt();
-			int n = 1;
-			while(true)
-			{
-				if(sumOfDigits(n) == d)
+			int d = sc.nextInt();	//  Input variable d
+			if(d<1 || d>100000)		//  Checking boundary conditions
+				System.exit(0);
+			int N = 1;
+			while(true)				//  For all possible positive integers N having sum of digits d
+			{						//  	and find the minimum possible digit sum
+				if(sumOfDigits(N) == d)
 					break;
-				n++;
+				N++;
 			}
-			System.out.println(sumOfDigits(n+1));
+			System.out.println(sumOfDigits(N+1));
 		}
+		sc.close();
 	}
-	private static int sumOfDigits(int n)
+	private static int sumOfDigits(int n)	//  Function for getting sum of digits
 	{
 		int sum = 0;
 		while(n > 0)
