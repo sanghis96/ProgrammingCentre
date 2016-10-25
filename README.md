@@ -11,6 +11,6 @@ opengl is used for Computer Graphics and GUI Design executes in visual studio co
 
 cpp folder contains some Interesting c++ codes
 
-python folder is initially empty
+python folder is initially empty.
 
 In web repository initially I added a sample website for total practice of beginners.
