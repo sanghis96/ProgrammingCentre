@@ -1,4 +1,4 @@
-﻿Build started 27-Oct-16 1:41:02 AM.
+﻿Build started 27-Oct-16 12:55:20 PM.
      1>Project "E:\ProgrammingCentre\opengl\Animation\Animation\Animation.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Animation.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -23,4 +23,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.71
+Time Elapsed 00:00:03.14
