@@ -3,7 +3,7 @@ All the programs for practice and contests
 
 It includes my all solutions which I have solved
 
-competativeProgramming contains the solution of Problem statements given by different Websites - Hackerrank, HackerEarth, LeetCode
+competativeProgramming contains the solution of Problem statements given by different Websites - Hackerrank, HackerEarth, Codechef, LeetCode
 
 java folder contains the java codes I have solved for practice or as an assignements.
 
