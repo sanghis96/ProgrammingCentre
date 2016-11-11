@@ -1,0 +1,20 @@
+﻿Build started 11-Nov-16 2:06:13 AM.
+     1>Project "E:\ProgrammingCentre\opengl\SeedFill\prac5\prac5.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\SeedFill.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+       Manifest:
+         All outputs are up-to-date.
+       FinalizeBuildStatus:
+         Deleting file "Debug\SeedFill.unsuccessfulbuild".
+         Touching "Debug\SeedFill.lastbuildstate".
+     1>Done Building Project "E:\ProgrammingCentre\opengl\SeedFill\prac5\prac5.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.65
