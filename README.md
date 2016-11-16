@@ -9,7 +9,7 @@ java folder contains the java codes I have solved for practice or as an assignem
 
 opengl is used for Computer Graphics and GUI Design executes in visual studio coded in c++
 
-cpp folder contains some Interesting c++ codes
+cpp folder contains some Interesting c++ codes.
 
 python folder is initially empty.
 
