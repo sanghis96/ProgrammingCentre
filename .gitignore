@@ -1,5 +1,8 @@
 java/.metadata/*
 java/.recommenders/*
+**/bin
+
+**/.settings
 *.classpath
 *.project
 *.sln
