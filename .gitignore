@@ -1,0 +1,4 @@
+java/.metadata/*
+java/.recommenders/*
+java/*.classpath
+java/*.project
