@@ -1,4 +1,9 @@
 java/.metadata/*
 java/.recommenders/*
-java/*.classpath
-java/*.project
+*.classpath
+*.project
+*.ipch
+*.user
+*.filters
+*.vcxproj
+*.sdf
