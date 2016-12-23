@@ -7,3 +7,6 @@ java/.recommenders/*
 *.filters
 *.vcxproj
 *.sdf
+*.suo
+**/Debug
+**/ipch
