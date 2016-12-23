@@ -2,6 +2,7 @@ java/.metadata/*
 java/.recommenders/*
 *.classpath
 *.project
+*.sln
 *.ipch
 *.user
 *.filters
