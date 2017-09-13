@@ -1,7 +1,6 @@
-import java.io.*;
 import java.util.*;
 
-public class Solution 
+public class ModifiedKaprekarNumbers 
 {
     public static void main(String[] args) 
     {
@@ -17,6 +16,7 @@ public class Solution
             }
         if(flag == 0)
            System.out.println("INVALID RANGE");
+        sc.close();
     }
     static boolean isKaprekar(long n)
     {

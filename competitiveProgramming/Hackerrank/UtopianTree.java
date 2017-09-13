@@ -1,7 +1,6 @@
-import java.io.*;
 import java.util.*;
 
-public class Solution 
+public class UtopianTree 
 {
     public static void main(String[] args)
     {
@@ -20,5 +19,6 @@ public class Solution
             }
             System.out.println(height);
         }
+        sc.close();
     }
 }

@@ -1,7 +1,6 @@
-import java.io.*;
 import java.util.*;
 
-public class Solution 
+public class CaesarCipher 
 {
     public static void main(String[] args) 
     {
@@ -23,5 +22,6 @@ public class Solution
         }
         for(int i=0; i<n; i++)
             System.out.print(info[i]);
+        sc.close();
     }
 }

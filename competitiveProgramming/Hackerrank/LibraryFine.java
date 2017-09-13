@@ -1,7 +1,6 @@
-import java.io.*;
 import java.util.*;
 
-public class Solution 
+public class LibraryFine 
 {
     public static void main(String[] args) 
     {
@@ -35,5 +34,6 @@ public class Solution
         else
             fine = 10000;
         System.out.println(fine);
+        sc.close();
     }
 }

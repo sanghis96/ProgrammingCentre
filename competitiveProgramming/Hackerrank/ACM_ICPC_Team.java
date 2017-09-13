@@ -16,7 +16,7 @@ public class ACM_ICPC_Team
             for(int j=0; j<m; j++)
                 arr[i][j] = Integer.parseInt(s.charAt(j)+"");
         }
-        int maxNoOfTopic=0, noOfTeams=0, count=0;
+        int maxNoOfTopic=0, count=0;
         int[] topics = new int[m+1];
         for(int i=0; i<=m; i++)
             topics[i] = 0; 

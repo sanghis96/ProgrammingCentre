@@ -1,7 +1,6 @@
-import java.io.*;
 import java.util.*;
 
-public class Solution 
+public class TimeConversion 
 {
     public static void main(String[] args) 
     {
@@ -20,5 +19,6 @@ public class Solution
                 time24 = "" + (Integer.parseInt(time12.substring(0,2)) + 12);
         time24 += time12.substring(2,8);
         System.out.println(time24);
+        sc.close();
     }
 }

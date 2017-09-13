@@ -1,7 +1,6 @@
-import java.io.*;
 import java.util.*;
 
-public class Solution 
+public class ChocolateFeast 
 {
     public static void main(String[] args) 
     {
@@ -25,5 +24,6 @@ public class Solution
             }
             System.out.println(totalC);
         }
+        sc.close();
     }
 }

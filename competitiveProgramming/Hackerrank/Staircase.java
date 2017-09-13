@@ -1,7 +1,6 @@
-import java.io.*;
 import java.util.*;
 
-public class Solution
+public class Staircase
 {
     public static void main(String[] args) 
     {
@@ -17,5 +16,6 @@ public class Solution
             System.out.println();
             spaces--;
         }
+        sc.close();
     }
 }
